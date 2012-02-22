@@ -1,0 +1,54 @@
+groups:
+    WOOD_TOOLS:
+        - wood_(spade|sword|hoe|(pick)?axe)
+    STONE_TOOLS:
+        - stone_(spade|sword|hoe|(pick)?axe)
+    IRON_TOOLS:
+        - iron_(spade|sword|hoe|(pick)?axe)
+    GOLD_TOOLS:
+        - gold_(spade|sword|hoe|(pick)?axe)
+    DIAMOND_TOOLS:
+        - diamond_(spade|sword|hoe|(pick)?axe)
+    LEATHER_ARMOR:
+        - leather_(helmet|chestplate|leggings|boots)
+    CHAINMAIL_ARMOR:
+        - chainmail_(helmet|chestplate|leggings|boots)
+    IRON_ARMOR:
+        - iron_(helmet|chestplate|leggings|boots)
+    GOLD_ARMOR:
+        - gold_(helmet|chestplate|leggings|boots)
+    DIAMOND_ARMOR:
+        - diamond_(helmet|chestplate|leggings|boots)
+    COMMON_ITEMS:
+        - BOOK
+        - BUCKET
+        - CAKE_BLOCK
+        - CHEST
+        - DEAD_BUSH
+        - DIRT
+        - FISTS
+        - FURNACE
+        - GRASS
+        - (THIN_)?GLASS
+        - GLOWSTONE
+        - JACK_O_LANTERN
+        - LADDER
+        - LEAVES
+        - LONG_GRASS
+        - MYCEL
+        - NETHER_STALK
+        - PAINTING
+        - POTION
+        - RED_ROSE
+        - SAPLING
+        - (WALL_)?SIGN(_POST)?
+        - SNOW
+        - TORCH
+        - TRAP_DOOR
+        - VINE
+        - WATER_LILY
+        - WOOL
+        - YELLOW_FLOWER
+        - WOOD
+        - WOOD_DOOR
+        - WORKBENCH

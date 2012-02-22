@@ -1,0 +1,14 @@
+gui:
+    hud:
+        background: http://dl.dropbox.com/u/54914681/class_test/info_bg.png
+        key-f: http://dl.dropbox.com/u/54914681/class_test/key_f.png
+        key-g: http://dl.dropbox.com/u/54914681/class_test/key_g.png
+        key-c: http://dl.dropbox.com/u/54914681/class_test/key_c.png
+        key-v: http://dl.dropbox.com/u/54914681/class_test/key_v.png
+    icons:
+        default: http://dl.dropbox.com/u/54914681/class_test/default.jpg
+        classes:
+            Warrior: http://dl.dropbox.com/u/54914681/class_test/warrior.jpg
+        skills:
+            AdrenalineRush: http://dl.dropbox.com/u/54914681/class_test/AdrenalineRush.jpg
+            PowerStroke: http://dl.dropbox.com/u/54914681/class_test/PowerStroke.jpg

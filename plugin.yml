@@ -1,0 +1,22 @@
+name: SolusRpg
+description: All purpose class/job handler for RP servers.
+version: 1.12
+main: me.dbstudios.solusrpg.SolusRpg
+depend: [Spout, PermissionsEx]
+author: Daybreak Studios
+commands:
+    class:
+        description: Main command for SolusRpg, handles class related commands
+        usage: Syntax error, type '/solus help' for assistance.
+    skill:
+        description: Skill command for SolusRpg, handles skill related commands
+        usage: Syntax error, type '/solus help' for assistance.
+    stats:
+        description: Stats command for SolusRpg, displays a players current stats
+        usage: Syntax error. Only valid command is '/stats'.
+    sr:
+        description: Misc. command for SolusRpg, handles all other functions not handled
+        usage: Syntax error, type '/solus help' for assistance.
+    solus:
+        description: Extra misc, used for help and tutorial commands.
+        usage: How did you mess up the help command?? ._. Try '/solus halp'

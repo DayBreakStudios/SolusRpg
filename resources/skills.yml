@@ -1,0 +1,121 @@
+skills:
+    notify-range: 20
+    ForcePush:
+        default-text-color: AQUA
+        cooldown: 60
+        range: LoS
+        push-multiplier: 10
+        cost:
+            health: 2
+            hunger: 0
+        cast-text: "{aqua}Muttering under your breath, you feel reality bend to your will and..."
+        cast-success: "{aqua}laugh as {target} is pushed away from you!"
+        cast-no-target: "{aqua}Your spell dissipates, unable to find it's intended target..."
+        help-text: "{aqua}A spell that twists the fabric of reality in order to push your foe away from you."
+    ForcePull:
+        cooldown: 60
+        range: LoS
+        pull-multiplier: 10
+        cost:
+            health: 2
+            hunger: 0
+        cast-text: "{aqua}Muttering under your breath, you feel reality bend to your will and..."
+        cast-success: "{aqua}laugh as {target} is pulled closer to you!"
+        cast-no-target: "{aqua}Your spell dissipates, unable to find it's intended target..."
+    HarmTouch:
+        cooldown: 30
+        range: 4
+        damage: 10
+        true-damage: true
+        cost:
+            health: 1
+            hunger: 0
+        cast-text: "{dark_green}Focusing your will, you attempt to twist {target}'s life force..."
+        cast-success: "{dark_green}And grin as you destroy the integrity of {target}'s life force!"
+        cast-notify: "{dark_green}{target} feels an crippling pain as {caster}'s hand touches his skin..."
+        cast-no-target: "{dark_green}And wince as your spell is unable to find it's mark..."
+        cast-cooldown: "{dark_green}Harm Touch is ready to be cast again."
+    Blaze:
+        cooldown: 60
+        range: 3
+        damage: 2
+        true-damage: false
+        cost:
+            health: 3
+            hunger: 0
+        allow-dot: true
+        cast-text: "{dark_red}Intoning your spell in a deep voice, you begin to bend the fabric of nature..."
+        cast-success: "{dark_red}And grin as your spell ignites {target}!"
+        cast-no-target: "{dark_red}And wince as your spell is unable to find it's mark..."
+    MyrisBlessing:
+        cooldown: 120
+        heal-amount: 2
+        duration: 5
+        range: 1
+        cost:
+            health: 0
+            hunger: 5
+        cast-text: "{green}Calming your mind, you reach out, shivering as healing energy flows through you, ready to heal your target..."
+        cast-success: "{green}You can see {target} visibly relax as their wounds begin heal."
+        cast-max-health: "{green}Your target is already at max health."
+        cast-finish: "{green}As the healing energy leaves your body, you regain control of your limbs."
+        cast-channeling: "{green}You cannot move while channeling a spell..."
+        cast-no-target: "{green}You feel a sense of loss as you spell unravels, unable to find it's target..."
+        cast-notify: "{green}Energy flows from {caster}'s hands into {target}'s body, healing {target}."
+        cast-cooldown: "{green}Myri's Blessing is ready to be cast again."
+    FrostTomb:
+        cooldown: 60
+        range: 25
+        duration: 15
+        cost:
+            health: 0
+            hunger: 3
+        cast-text: "{aqua}Feeling as if your blood itself has turned to ice, you push your frozen magic outward."
+        cast-success: "{aqua}{target} feels a chill as frost begins to cover his body!"
+        cast-no-target: "{aqua}You feel your magic disappate, unable to find it's target."
+        cast-notify: "{aqua}{target} is frozen in place by {caster}'s Frost Tomb!"
+        cast-cooldown: "{aqua}Frost Tomb is ready to be cast again."
+    HealingAura:
+        amount: 2
+        cooldown: 5
+        range: 5
+        cost:
+            health: 0
+            hunger: 1
+        cast-text: "{aqua}Healing energy envelops those nearby."
+        cast-notify: "{aqua}Healing energy surrounds your body as you feel your pain receed."
+        cast-cooldown: "{aqua}Healing Aura is ready to be cast again."
+    HeavensWrath:
+        damage: 10
+        cooldown: 600
+        range: 25
+        cost:
+            health: 5
+            hunger: 5
+        cast-text: "{dark_red}Channeling your anger, you call down the wrath of the heavens..."
+        cast-success: "{dark_red}{target} is struck by Heaven's Wrath!"
+        cast-no-target: "{dark_red}And shudder as your magic misses it's mark..."
+        cast-notify: "{dark_red}{target} is smote by {caster}'s Heaven's Wrath!"
+        cast-cooldown: "{aqua}Heaven's Wrath is ready to be cast again."
+    Vampirism:
+        amount: 2
+        cycles: 5
+        cycle-duration: 2
+        cause-slow: true
+        slow-duration: 60
+        slow-amount: 15.0
+        cooldown: 30
+        cast-text: "{dark_red}Leaning in close, you place your fangs against {target}'s exposed throat and bite down..."
+        cast-complete: "{dark_red}As you remove your fangs, the puncture wounds in {target}'s neck begin to heal."
+        cast-target-notify: "{dark_red}Your body locks up as you feel something puncture the side of your neck..."
+        cast-target-complete: "{dark_red}As the pain in your neck receeds, you regain control of your body. You feel oddly tired, though..."
+        cast-notify: "{dark_red}The Vampire {caster} leans over and begins to drink {target}'s blood..."
+        cast-fail: "{dark_red}There is no one close enough to feast on..."
+        cast-cooldown: "{dark_red}Vampirism is ready to be cast again."
+        caster-move-deny: "{dark_red}Your fangs are still buried in your victim's neck, and you cannot flee."
+        target-move-deny: "{dark_red}The pain from the twin puncture wounds in your neck seems to be causing your muscles to sieze up..."
+    Photosensitivity:
+        initial-damage: 5
+        ignite: true
+        burn-time: 5
+        tolerance: 12

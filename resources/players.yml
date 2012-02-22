@@ -1,0 +1,7 @@
+players:
+    LartTyler:
+        class: Swordsman
+        health: 40
+    TheGodlyBrit:
+        class: Swordsman
+        health: 2

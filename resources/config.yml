@@ -1,0 +1,918 @@
+config:
+    default-class: Classless
+    messages:
+        place-deny: 0{aqua}You may not place {item}...
+        use-deny: 0{green}You cannot use {item}...
+        break-deny: 0{AQUA}You may not break {item}...
+        wear-deny: 0{gold}You may not wear {item}...
+        wear-deny-item-drop: 0{GOLD}Your inventory was full, so your {item} was dropped...
+        craft-deny: 0{dark_aqua}You may not craft {item}...
+        smelt-deny: 0{dark_aqua}You may not place {item} in a furnace...
+        colors:
+            info1: AQUA
+            info2: Green
+            list: aqua
+            skill: gold
+            stats: dark_aqua
+            sr: dark_red
+            help1: GREEN
+            help2: dark_green
+    skills:
+        - FrostTomb
+        - HarmTouch
+        - MyrisBlessing
+        - Vampirism
+    speeds:
+        leather:
+            helmet: 2
+            chestplate: 4
+            leggings: 2
+            boots: 2
+        chainmail:
+            helmet: 3
+            chestplate: 6
+            leggings: 3
+            boots: 3
+        iron:
+            helmet: 9
+            chestplate: 18
+            leggings: 9
+            boots: 9
+        gold:
+            helmet: 1
+            chestplate: 2
+            leggings: 1
+            boots: 1
+        diamond:
+            helmet: 5
+            chestplate: 10
+            leggings: 5
+            boots: 5
+    item-weight:
+        default: 0.01
+        overweight-slow: 35.0
+        BEDROCK: 0.0
+        BOOKSHELF: 1.0
+        BREWING_STAND_ITEM: 5.0
+        BRICK: 0.5
+        BRICK_STAIRS: 1.25
+        CAULDRON_ITEM: 5.0
+        CHEST: 1.0
+        COAL_ORE: 2.0
+        COBBLESTONE: 1.5
+        COBBLESTONE_STAIRS: 2.0
+        COOKED_BEEF: 0.25
+        COOKED_CHECKEN: 0.25
+        COOKED_FISH: 0.25
+        DIAMOND_AXE: 18.5
+        DIAMOND_BLOCK: 10.0
+        DIAMOND_HOE: 12.0
+        DIAMOND_PICKAXE: 15.0
+        DIAMOND_SPADE: 17.5
+        DIAMOND_SWORD: 25.0
+        DIRT: 0.25
+        FURNACE: 3.5
+        GLASS: 0.75
+        GLOWSTONE: 0.75
+        GOLD_AXE: 16.5
+        GOLD_BLOCK: 8.0
+        GOLD_HOE: 15.0
+        GOLD_NUGGET: 0.0
+        GOLD_ORE: 2.5
+        GOLD_PICKAXE: 13.0
+        GOLD_SPADE: 14.5
+        GOLD_SWORD: 18.0
+        GRAVEL: 1.0
+        GRILLED_PORK: 0.25
+        IRON_AXE: 16.5
+        IRON_BLOCK: 8.0
+        IRON_FENCE: 1.75
+        IRON_HOE: 15.0
+        IRON_PICKAXE: 13.0
+        IRON_SPADE: 14.5
+        IRON_SWORD: 18.0
+        LADDER: 0.5
+        LOG: 2.0
+        MOSSY_COBBLESTONE: 1.5
+        OBSIDIAN: 4.0
+        PISTON_BASE: 1.5
+        PISTON_STICKY_BASE: 1.5
+        PORK: 0.25
+        POTION: 0.5
+        PUMPKIN: 1.5
+        RAW_BEEF: 0.25
+        RAW_CHICKEN: 0.25
+        RAW_FISH: 0.25
+        REDSTONE_TORCH_ON: 0.1
+        ROTTEN_FLESH: 0.25
+        SAND: 0.5
+        SANDSTONE: 1.0
+        SAPLING: 0.5
+        SHEARS: 8.5
+        SIGN: 1.25
+        SMOOTH_BRICK: 2.0
+        SMOOTH_STAIRS: 2.5
+        STEP: 0.75
+        STONE: 2.5
+        STONE_AXE: 10.0
+        STONE_HOE: 6.0
+        STONE_PICKAXE: 8.0
+        STONE_SPADE: 7.0
+        STONE_SWORD: 15.0
+        WOOD: 1.0
+        WOOD_AXE: 8.0
+        WOOD_HOE: 2.0
+        WOOD_PICKAXE: 5.0
+        WOOD_SPADE: 4.0
+        WOOD_STAIRS: 1.5
+        WOOD_SWORD: 10.0
+        WOOL: 0.1
+        WORKBENCH: 5.0
+    classes:
+        Classless:
+            name: Classless
+            bio: The default class
+            can-use:
+                - Nothing
+            can-wear:
+                - Nothing
+            can-craft:
+                - Nothing
+            can-smelt:
+                - Nothing
+            can-place:
+                - Nothing
+            can-break:
+                - Nothing
+            skills:
+                - None
+            stats:
+                health: 5
+                damage: -20
+                defense: -5
+                speed: 10
+                jump-height: 50
+        Swordsman:
+            name: Swordsman
+            bio: A standard melee fighter
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - STONE_SWORD
+                - IRON_SWORD
+            can-wear:
+                - LEATHER_ARMOR
+                - CHAINMAIL_ARMOR
+                - IRON_ARMOR
+                - GOLD_ARMOR
+                - DIAMOND_ARMOR
+            can-craft:
+                - WOOD_SWORD
+                - TORCH
+            can-smelt:
+                - Nothing
+            can-break:
+                - COMMON_ITEMS
+            can-place:
+                - COMMON_ITEMS
+            skills: []
+            stats:
+                health: 40
+                damage: +5
+                defense: +0
+                speed: 100
+                jump-height: 100
+                max-weight: 500.0
+        Archer:
+            name: Archer
+            bio: A standard ranged fighter
+            can-use:
+                - COMMON_ITEMS
+                - BOW
+                - WOOD_SWORD
+            can-wear:
+                - LEATHER_ARMOR
+                - CHAINMAIL_ARMOR
+            can-craft:
+                - WOOD_SWORD
+                - TORCH
+                - ARROW
+                - BOW
+            can-smelt:
+                - PORK
+                - RAW_BEEF
+                - RAW_FISH
+                - RAW_CHICKEN
+            can-break:
+                - COMMON_ITEMS
+            can-place:
+                - COMMON_ITEMS
+            skills: []
+            stats:
+                health: 30
+                damage: +5
+                defense: +0
+                speed: 100
+                jump-height: 100
+        Miner:
+            name: Miner
+            bio: A standard excavator
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - WOOD_PICKAXE
+                - STONE_PICKAXE
+                - IRON_PICKAXE
+                - GOLD_PICKAXE
+            can-wear:
+                - LEATHER_ARMOR
+            can-craft:
+                - BRICK
+                - BRICK_STAIRS
+                - CLAY
+                - COBBLESTONE_STAIRS
+                - DIAMOND_BLOCK
+                - GOLD_BLOCK
+                - IRON_BLOCK
+                - LAPIS_BLOCK
+                - NETHER_BRICK
+                - NETHER_BRICK_STAIRS
+                - NETHER_FENCE
+                - OBSIDIAN
+                - SANDSTONE
+                - SMOOTH_BRICK
+                - SMOOTH_STAIRS
+                - STEP
+                - TORCH
+            can-smelt:
+                - NOTHING
+            can-break:
+                - COMMON_ITEMS
+                - BRICK
+                - BRICK_STAIRS
+                - CLAY
+                - COAL_ORE
+                - COBBLESTONE
+                - COBBLESTONE_STAIRS
+                - DIAMOND_BLOCK
+                - DIAMOND_ORE
+                - DOUBLE_STEP
+                - FURNACE
+                - GLOWING_REDSTONE_ORE
+                - GLOWSTONE
+                - GOLD_BLOCK
+                - GOLD_ORE
+                - GRAVEL
+                - IRON_BLOCK
+                - IRON_DOOR
+                - IRON_DOOR_BLOCK
+                - IRON_FENCE
+                - IRON_ORE
+                - LAPIS_BLOCK
+                - LAPIS_ORE
+                - MOSSY_COBBLESTONE
+                - NETHER_BRICK
+                - NETHER_BRICK_STAIRS
+                - NETHER_FENCE
+                - OBSIDIAN
+                - REDSTONE_ORE
+                - SAND
+                - SANDSTONE
+                - SMOOTH_BRICK
+                - SMOOTH_STAIRS
+                - SOUL_SAND
+                - STEP
+                - STONE
+                - WOOD
+            can-place:
+                - COMMON_ITEMS
+                - BRICK
+                - BRICK_STAIRS
+                - CLAY
+                - COAL_ORE
+                - COBBLESTONE
+                - COBBLESTONE_STAIRS
+                - DIAMOND_BLOCK
+                - DIAMOND_ORE
+                - DOUBLE_STEP
+                - FURNACE
+                - GLOWING_REDSTONE_ORE
+                - GLOWSTONE
+                - GOLD_BLOCK
+                - GOLD_ORE
+                - GRAVEL
+                - IRON_BLOCK
+                - IRON_DOOR
+                - IRON_DOOR_BLOCK
+                - IRON_FENCE
+                - LAPIS_BLOCK
+                - LAPIS_ORE
+                - MOSSY_COBBLESTONE
+                - NETHER_BRICK
+                - NETHER_BRICK_STAIRS
+                - NETHER_FENCE
+                - NETHERRACK
+                - OBSIDIAN
+                - REDSTONE_ORE
+                - SAND
+                - SANDSTONE
+                - SMOOTH_BRICK
+                - SMOOTH_STAIRS
+                - SOUL_SAND
+                - STEP
+                - STONE
+                - WOOD
+            skills: []
+            stats:
+                health: 20
+                damage: +0
+                defense: +0
+                speed: 100
+                jump-height: 100
+        Woodsman:
+            name: Woodsman
+            bio: A standard woodsman
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - WOOD_AXE
+                - STONE_AXE
+                - IRON_AXE
+                - GOLD_AXE
+            can-wear:
+                - LEATHER_ARMOR
+            can-craft:
+                - WOOD_STAIRS
+                - WOOD_STEP
+                - LADDER
+                - WOOD
+                - WOOD_PLATE
+                - WORKBENCH
+                - BOOKSHELF
+                - WOOD_DOOR
+                - CHEST
+                - WOOD_TOOLS
+                - TORCH
+                - FENCE
+                - FENCE_GATE
+                - TRAP_DOOR
+                - STICK
+                - SIGN
+                - PAPER
+                - BOOK
+                - BOWL
+                - ARROW
+                - PAINTING
+            can-smelt:
+                - Nothing
+            can-break:
+                - COMMON_ITEMS
+                - BOOKSHELF
+                - FENCE
+                - FENCE_GATE
+                - LADDER
+                - LOG
+                - WOOD
+                - WOOD_PLATE
+                - WOOD_STAIRS
+                - WOOD_STEP
+                - WOOD_DOOR
+                - WORKBENCH
+            can-place:
+                - COMMON_ITEMS
+                - BOOKSHELF
+                - FENCE
+                - FENCE_GATE
+                - LADDER
+                - LOG
+                - WOOD
+                - WOOD_PLATE
+                - WOOD_STAIRS
+                - WOOD_STEP
+                - WOOD_DOOR
+                - WORKBENCH
+            skills: []
+            stats:
+                health: 20
+                damage: +0
+                defense: +0
+                speed: 100
+                jump-height: 100
+        Farmer:
+            name: Farmer
+            bio: A standard farmer
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - WOOD_HOE
+                - STONE_HOE
+                - IRON_HOE
+                - GOLD_HOE
+            can-wear:
+                - LEATHER_ARMOR
+            can-craft:
+                - WOOD_SWORD
+                - TORCH
+                - BREAD
+                - MELON_SEEDS
+                - SUGAR
+                - MUSHROOM_SOUP
+                - CAKE
+            can-smelt:
+                - RAW_BEEF
+                - PORK
+                - RAW_CHICKEN
+                - RAW_FISH
+            can-break:
+                - COMMON_ITEMS
+                - CROPS
+                - FENCE
+                - FENCE_GATE
+                - JACK_O_LANTERN
+                - MELON_BLOCK
+                - MELON_STEM
+                - PUMPKIN
+                - PUMPKIN_STEM
+                - SEEDS
+                - SOIL
+                - SUGAR_CANE_BLOCK
+                - WHEAT
+            can-place:
+                - COMMON_ITEMS
+                - CROPS
+                - FENCE
+                - FENCE_GATE
+                - JACK_O_LANTERN
+                - MELON_BLOCK
+                - MELON_STEM
+                - PUMPKIN
+                - PUMPKIN_STEM
+                - SEEDS
+                - SOIL
+                - SUGAR_CANE_BLOCK
+                - WHEAT
+            skills: []
+            stats:
+                health: 20
+                damage: +0
+                defense: +0
+                speed: 100
+                jump-height: 100
+        Mage:
+            name: Mage
+            bio: A standard mage
+            can-use:
+                - COMMON_ITEMS
+                - GOLD_SWORD
+                - WOOD_SWORD
+                - GOLD_HOE
+            can-wear:
+                - LEATHER_ARMOR
+            can-craft:
+                - WOOD_SWORD
+                - TORCH
+                - POTION
+            can-smelt:
+                - Nothing
+            can-break:
+                - COMMON_ITEMS
+                - BREWING_STAND
+                - CAULDRON
+                - ENCHANTING_TABLE
+                - DRAGON_EGG
+            can-place:
+                - COMMON_ITEMS
+                - BREWING_STAND
+                - CAULDRON
+                - ENCHANTING_TABLE
+                - DRAGON_EGG
+            skills:
+                active:
+                    - FrostTomb
+                    - MyrisBlessing
+                    - HarmTouch
+                passive: []
+            stats:
+                health: 18
+                damage: +0
+                defense: +0
+                speed: 100
+                jump-height: 100
+        Herbalist:
+            name: Herbalist
+            bio: A standard herbalist
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - WOOD_PICKAXE
+            can-wear:
+                - Nothing
+            can-craft:
+                - WOOD_SWORD
+                - TORCH
+                - POTION
+                - INK_SACK
+                - MUSHROOM_SOUP
+                - GLASS_BOTTLE
+                - BLAZE_POWDER
+                - MAGMA_CREAM
+                - FERMENTED_SPIDER_EYE
+                - .*?_?WOOL
+                - EYE_OF_ENDER
+            can-smelt:
+                - SAND
+                - COAL
+            can-break:
+                - COMMON_ITEMS
+                - BREWING_STAND
+                - BROWN_MUSHROOM
+                - CAULDRON
+                - ENCHANTMENT_TABLE
+                - BROWN_MUSHROOM
+                - HUGE_MUSHROOM_1
+                - HUGE_MUSHROOM_2
+                - JACK_O_LANTERN
+                - RED_MUSHROOM
+                - .*?_?WOOL
+            can-place:
+                - COMMON_ITEMS
+                - BREWING_STAND
+                - BROWN_MUSHROOM
+                - CAULDRON
+                - ENCHANTMENT_TABLE
+                - BROWN_MUSHROOM
+                - HUGE_MUSHROOM_1
+                - HUGE_MUSHROOM_2
+                - JACK_O_LANTERN
+                - RED_MUSHROOM
+                - .*?_?WOOL
+            skills: []
+            stats:
+                health: 20
+                damage: +0
+                defense: +0
+                speed: 100
+                jump-height: 100
+        Smith:
+            name: Smith
+            bio: A standard smith
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+            can-wear:
+                - LEATHER_ARMOR
+            can-craft:
+                - BREWING_STAND
+                - BUCKET
+                - CAULDRON
+                - LEATHER_ARMOR
+                - IRON_ARMOR
+                - WOOD_TOOLS
+                - STONE_TOOLS
+                - IRON_TOOLS
+                - IRON_DOOR
+                - IRON_FENCE
+                - DETECTOR_RAIL
+                - DISPENSER
+                - FURNACE
+                - FLINT_AND_STEEL
+                - GOLDEN_APPLE
+                - MINECART
+                - NOTE_BLOCK
+                - POWERED_RAIL
+                - RAILS
+                - SHEARS
+                - STORAGE_MINECART
+                - TORCH
+                - GLASS_BOTTLE
+            can-smelt:
+                - ALL
+            can-break:
+                - COMMON_ITEMS
+                - BURNING_FURNACE
+                - FURNACE
+                - WORKBENCH
+            can-place:
+                - COMMON_ITEMS
+                - FURNACE
+                - WORKBENCH                
+            skills: []
+            stats:
+                health: 20
+                damage: +0
+                defense: +0
+                speed: 100
+                jump-height: 100
+        AppEngineer:
+            name: Apprentice Engineer
+            bio: A Kree Redstone engineer in training
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - WOOD_PICKAXE
+                - WOOD_SPADE
+            can-wear:
+                - LEATHER_ARMOR
+            can-craft:
+                - DIODE
+                - LEVER
+                - REDSTONE_TORCH_ON
+                - STONE_BUTTON
+                - STONE_PLATE
+                - WOOD_PLATE
+            can-smelt:
+                - Nothing
+            can-break:
+                - DETECTOR_RAIL
+                - DIODE_BLOCK_OFF
+                - DIODE_BLOCK_ON
+                - JUKEBOX
+                - LEVER
+                - NOTE_BLOCK
+                - PISTON_BASE
+                - PISTON_STICKY_BASE
+                - POWERED_RAIL
+                - REDSTONE
+                - REDSTONE_TORCH_ON
+                - REDSTONE_TORCH_OFF
+                - REDSTONE_WIRE
+                - STONE_BUTTON
+                - STONE_PLATE
+                - WOOD_PLATE
+                - WOOL
+            can-place:
+                - DETECTOR_RAIL
+                - DIODE_BLOCK_OFF
+                - JUKEBOX
+                - LEVER
+                - NOTE_BLOCK
+                - PISTON_BASE
+                - PISTON_STICKY_BASE
+                - POWERED_RAIL
+                - REDSTONE
+                - REDSTONE_TORCH_ON
+                - REDSTONE_WIRE
+                - STONE_BUTTON
+                - STONE_PLATE
+                - WOOD_PLATE
+                - WOOL
+            skills: []
+            stats:
+                health: 20
+                damage: +0
+                defense: +0
+                speed: 100
+                jump-height: 100
+        Engineer:
+            name: Engineer
+            bio: A Kree Redstone engineer
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - WOOD_PICKAXE
+                - STONE_PICKAXE
+                - IRON_PICKAXE
+                - WOOD_SPADE
+                - STONE_SPADE
+                - IRON_SPADE
+            can-wear:
+                - LEATHER_ARMOR
+            can-craft:
+                - COMPASS
+                - DETECTOR_RAIL
+                - DIODE
+                - JUKEBOX
+                - LEVER
+                - NOTE_BLOCK
+                - PISTON_BASE
+                - PISTONE_STICKY_BASE
+                - POWERED_RAIL
+                - RAILS
+                - REDSTONE_TORCH_ON
+                - STONE_BUTTON
+                - STONE_PLATE
+                - WATCH
+                - WOOD_PLATE
+            can-smelt:
+                - Nothing
+            can-break:
+                - COBBLESTONE
+                - DETECTOR_RAIL
+                - DIODE_BLOCK_OFF
+                - DIODE_BLOCK_ON
+                - JUKEBOX
+                - LEVER
+                - NOTE_BLOCK
+                - PISTON_BASE
+                - PISTON_STICKY_BASE
+                - POWERED_RAIL
+                - REDSTONE
+                - REDSTONE_TORCH_ON
+                - REDSTONE_TORCH_OFF
+                - REDSTONE_WIRE
+                - STONE_BUTTON
+                - STONE_PLATE
+                - WOOD_PLATE
+                - WOOL
+            can-place:
+                - COBBLESTONE
+                - DETECTOR_RAIL
+                - DIODE_BLOCK_OFF
+                - JUKEBOX
+                - LEVER
+                - NOTE_BLOCK
+                - PISTON_BASE
+                - PISTON_STICKY_BASE
+                - POWERED_RAIL
+                - REDSTONE
+                - REDSTONE_TORCH_ON
+                - REDSTONE_WIRE
+                - STONE_BUTTON
+                - STONE_PLATE
+                - WOOD_PLATE
+                - WOOL
+            skills: []
+            stats:
+                health: 20
+                damage: +0
+                defense: +0
+                speed: 100
+                jump-height: 100
+        Vampire:
+            name: Vampire
+            bio: A creature of the night, Vampires feed on the blood of the living
+            can-use:
+                - COMMON_ITEMS
+            can-wear:
+                - (LEATHER|IRON|GOLD|DIAMOND)_ARMOR
+            can-break:
+                - COMMON_ITEMS
+            can-place:
+                - COMMON_ITEMS
+            skills:
+                active:
+                    - Vampirism
+                passive:
+                    - Photosensitivity
+            stats:
+                health: 30
+                damage: +2
+                defense: +0
+                speed: 125
+                jump-height: 150
+        Admin:
+            name: All Your Admin Are Belong To Us
+            bio: Sexy admins use this!
+            can-use:
+                - ALL
+            can-wear:
+                - ALL
+            can-craft:
+                - ALL
+            can-smelt:
+                - ALL
+            can-break:
+                - ALL
+            can-place:
+                - ALL
+            skills:
+                - ForcePush
+                - HarmTouch
+                - MyrisBlessing
+                - FrostTomb
+            stats:
+                health: 100
+                damage: +20
+                defense: +20
+                speed: 100
+                jump-height: 100
+        SuperAdmin:
+            name: Super Admin
+            bio: WHEEEEEE!!!!
+            can-use:
+                - ALL
+            can-wear:
+                - ALL
+            can-craft:
+                - ALL
+            can-smelt:
+                - ALL
+            can-break:
+                - ALL
+            can-place:
+                - ALL
+            skills:
+                - ForcePush
+                - HarmTouch
+                - MyrisBlessing
+                - FrostTomb
+            stats:
+                health: 100
+                damage: +20
+                defense: +20
+                speed: 500
+                jump-height: 450
+        DomarrKorgoth:
+            name: Domarr Korgoth
+            bio: Grand Chieftain of the Bjardsoen
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - STONE_SWORD
+                - IRON_SWORD
+                - GOLD_SWORD
+                - DIAMOND_SWORD
+                - WOOD_AXE
+                - STONE_AXE
+                - IRON_AXE
+                - GOLD_AXE
+                - DIAMOND_AXE
+                - BOW
+            can-wear:
+                - LEATHER_ARMOR
+                - CHAINMAIL_ARMOR
+                - IRON_ARMOR
+                - GOLD_ARMOR
+            can-craft:
+                - Nothing
+            can-smelt:
+                - Nothing
+            can-break:
+                - COMMON_ITEMS
+            can-place:
+                - COMMON_ITEMS
+            skills: []
+            stats:
+                health: 40
+                damage: +0
+                defense: +0
+                speed: 125
+                jump-height: 175 
+        GrindelMorgus:
+            name: Grindel Morgus
+            bio: Lord of the Kree
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - STONE_SWORD
+                - IRON_SWORD
+                - GOLD_SWORD
+                - DIAMOND_SWORD
+            can-wear:
+                - LEATHER_ARMOR
+                - CHAINMAIL_ARMOR
+                - IRON_ARMOR
+                - GOLD_ARMOR
+                - DIAMOND_ARMOR
+            can-craft:
+                - ALL
+            can-smelt:
+                - ALL
+            can-break:
+                - COMMON_ITEMS
+                - BURNING_FURNACE
+                - FURNACE
+            can-place:
+                - COMMON_ITEMS
+                - FURNACE
+            skills: []
+            stats:
+                health: 30
+                damage: +0
+                defense: +0
+                speed: 125
+                jump-height: 200
+        FelixVanburen:
+            name: Felix Vanburen
+            bio: Lord of Cmok
+            can-use:
+                - COMMON_ITEMS
+                - WOOD_SWORD
+                - STONE_SWORD
+                - IRON_SWORD
+                - GOLD_SWORD
+                - DIAMOND_SWORD
+            can-wear:
+                - LEATHER_ARMOR
+                - CHAINMAIL_ARMOR
+                - IRON_ARMOR
+                - GOLD_ARMOR
+                - DIAMOND_ARMOR
+            can-craft:
+                - TORCH
+            can-smelt:
+                - RAW_BEEF
+                - RAW_CHICKEN
+                - PORK
+                - RAW_FISH
+            can-break:
+                - COMMON_ITEMS
+            can-place:
+                - COMMON_ITEMS
+            skills: []
+            stats:
+                health: 50
+                damage: +5
+                defense: +0
+                speed: 135
+                jump-height: 100
